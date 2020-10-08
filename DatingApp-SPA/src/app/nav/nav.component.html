@@ -16,7 +16,7 @@
     </ul>
 
     <div class="dropdown" *ngIf="loggedIn()">
-        <a class="dropdown-toggle text-light">Welcome User</a>
+        <a class="dropdown-toggle text-light">Welcome {{authService.decodedToken?.unique_name | titlecase }}</a>
         <div class="dropdown-menu">
             <a href="#" class="dropdown-item"><i class="fa fa-user"></i> Edit Profile</a>
             <div class="dropdown-diviver"></div>
