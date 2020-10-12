@@ -1,5 +1,5 @@
-﻿using DatingApp.API.Models;
-using System.Collections.Generic;
+﻿using DatingApp.API.Helpers;
+using DatingApp.API.Models;
 using System.Threading.Tasks;
 
 namespace DatingApp.API.Data
@@ -12,7 +12,7 @@ namespace DatingApp.API.Data
 
         public Task<bool> SaveAll();
 
-        public Task<IEnumerable<User>> GetUsers();
+        public Task<PagedList<User>> GetUsers(UserParams userParams);
 
         public Task<User> GetUser(int id);
 
