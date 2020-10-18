@@ -7,6 +7,7 @@ import { environment } from '../../environments/environment';
 import { User } from '../models/user';
 import { PaginatedResult, Pagination } from '../models/pagination';
 import { Message } from '../models/message';
+import { tick } from '@angular/core/testing';
 
 @Injectable({
   providedIn: 'root'
@@ -98,5 +99,9 @@ export class UserService {
 
   getMessageThread(id: number, recipientId: number) {
     return this.http.get<Message[]>(this.baseUrl + 'users/' + id + '/messages/thread/' + recipientId);
+  }
+
+  sendMessage(id: number, message: Message) {
+    return this.http.post(this.baseUrl + 'users/' + id + '/messages', message);
   }
 }
