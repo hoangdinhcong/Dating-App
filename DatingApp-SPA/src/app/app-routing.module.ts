@@ -10,9 +10,10 @@ import { MemberDetailComponent } from './members/member-detail/member-detail.com
 import { MemberDetailResolver } from './resolvers/member-detail.resolver';
 import { MemberListResolver } from './resolvers/member-list.resolver';
 import { MemberEditComponent } from './members/member-edit/member-edit.component';
-import { MemberEditResolver } from './resolvers/member-edit.resolver copy';
+import { MemberEditResolver } from './resolvers/member-edit.resolver';
 import { PreventUnSavedChangesGuard } from './guards/prevent-unsaved-changes.guard';
 import { ListResolver } from './resolvers/list.resolver';
+import { MessagesResolver } from './resolvers/messages.resolver';
 
 const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -34,10 +35,13 @@ const routes: Routes = [
                 resolve: { user: MemberEditResolver },
                 canDeactivate: [PreventUnSavedChangesGuard]
             },
-            { path: 'messages', component: MessagesComponent },
+            {
+                path: 'messages', component: MessagesComponent,
+                resolve: { messages: MessagesResolver }
+            },
             {
                 path: 'lists', component: ListsComponent,
-                resolve: { user: ListResolver }
+                resolve: { users: ListResolver }
             },
         ]
     },
