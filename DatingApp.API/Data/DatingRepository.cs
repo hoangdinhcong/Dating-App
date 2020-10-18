@@ -156,7 +156,14 @@ namespace DatingApp.API.Data
 
         public async Task<IEnumerable<Message>> GetMessagesThread(int userId, int recipientId)
         {
-            throw new NotImplementedException();
+            var messages = await _context.Messages
+               .Include(u => u.Sender).ThenInclude(p => p.Photos)
+               .Include(u => u.Recipient).ThenInclude(p => p.Photos)
+               .Where(u => u.RecipientId == userId && u.SenderId == recipientId
+               || u.RecipientId == recipientId && u.SenderId == userId)
+               .OrderByDescending(m => m.MessageSent)
+               .ToListAsync();
+            return messages;
         }
     }
 }
