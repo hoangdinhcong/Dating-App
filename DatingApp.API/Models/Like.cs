@@ -1,5 +1,5 @@
 ﻿
-namespace DatingApp.API.Models
+namespace API.Models
 {
     public class Like
     {

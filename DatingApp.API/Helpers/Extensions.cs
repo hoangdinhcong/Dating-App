@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using System;
 
-namespace DatingApp.API.Helpers
+namespace API.Helpers
 {
     public static class Extensions
     {

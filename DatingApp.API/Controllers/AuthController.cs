@@ -3,15 +3,15 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
+using API.Data;
 using AutoMapper;
-using DatingApp.API.Data;
-using DatingApp.API.Dtos;
-using DatingApp.API.Models;
+using API.Dtos;
+using API.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 
-namespace DatingApp.API.Controllers
+namespace API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

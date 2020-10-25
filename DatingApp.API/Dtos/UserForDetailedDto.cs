@@ -1,8 +1,8 @@
-﻿using DatingApp.API.Models;
+﻿using API.Models;
 using System;
 using System.Collections.Generic;
 
-namespace DatingApp.API.Dtos
+namespace API.Dtos
 {
     public class UserForDetailedDto
     {

@@ -1,10 +1,10 @@
-﻿using DatingApp.API.Models;
+﻿using API.Models;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
-namespace DatingApp.API.Data
+namespace API.Data
 {
     public class Seed
     {

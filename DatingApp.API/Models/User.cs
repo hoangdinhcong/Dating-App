@@ -3,7 +3,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace DatingApp.API.Models
+namespace API.Models
 {
     public class User
     {

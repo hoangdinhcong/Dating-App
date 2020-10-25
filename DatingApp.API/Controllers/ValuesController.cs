@@ -5,11 +5,11 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using DatingApp.API.Data;
-using DatingApp.API.Models;
+using API.Models;
 using Microsoft.AspNetCore.Authorization;
+using API.Data;
 
-namespace DatingApp.API.Controllers
+namespace API.Controllers
 {
     [Authorize]
     [Route("api/[controller]")]

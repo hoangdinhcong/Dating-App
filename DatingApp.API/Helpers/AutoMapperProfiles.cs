@@ -1,9 +1,9 @@
 ﻿using AutoMapper;
-using DatingApp.API.Dtos;
-using DatingApp.API.Models;
+using API.Dtos;
+using API.Models;
 using System.Linq;
 
-namespace DatingApp.API.Helpers
+namespace API.Helpers
 {
     public class AutoMapperProfiles : Profile
     {

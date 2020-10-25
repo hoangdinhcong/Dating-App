@@ -1,5 +1,5 @@
 ﻿
-namespace DatingApp.API.Dtos
+namespace API.Dtos
 {
     public class UserForLoginDto
     {

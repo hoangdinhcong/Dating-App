@@ -1,4 +1,4 @@
-﻿namespace DatingApp.API.Helpers
+﻿namespace API.Helpers
 {
     public class UserParams
     {

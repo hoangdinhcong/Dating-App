@@ -1,17 +1,16 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using API.Data;
 using AutoMapper;
-using DatingApp.API.Data;
-using DatingApp.API.Dtos;
-using DatingApp.API.Helpers;
-using DatingApp.API.Models;
+using API.Dtos;
+using API.Helpers;
+using API.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace DatingApp.API.Controllers
+namespace API.Controllers
 {
     [ServiceFilter(typeof(LogUserActivity))]
     [Authorize]
